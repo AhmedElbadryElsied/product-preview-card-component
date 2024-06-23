@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+   background-color: hsl(30, 38%, 92%);
+   font-family: "Montserrat", sans-serif;
+   min-height: 100vh;
+   display: grid;
+   place-content: center; 
+}
+#prouduct{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    max-width: 600px;
+    margin: 1rem;
+}
+img{
+    display: block;
+    max-width: 100%;
+    border-radius:10px 0 0 10px ;
+}
+.prouduct-content{
+    border-radius: 0 10px 10px 0;
+    padding: 2rem;
+    background: #fff;
+}
+.prouduct-content .category{
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: hsl(228, 12%, 48%);
+
+}
+.prouduct-content h1{
+    font-family:"Fraunces", serif ;
+    font-size: 30px;
+    margin: 20px 0;
+    line-height: 1;
+    color: hsl(212, 21%, 14%);
+
+}
+.prouduct-content p{
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6;
+}
+.prouduct-content .brice{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.prouduct-content .discound-price{
+    color:hsl(158, 36%, 37%) ;
+    font-size: 30px;
+    font-family:"Fraunces", serif ;
+    margin-right: 20px;
+
+}
+.prouduct-content .Cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: hsl(158, 36%, 37%) ;
+    color: #fff;
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+}
+.prouduct-content .Cart::before{
+    content: "";
+    background: url(../assets/imgs/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+    margin-right: 10px;
+    
+}
+@media(max-width:700px){
+    #prouduct{
+    grid-template-columns: 1fr;
+    }
+    #prouduct img{
+    border-radius:10px 10px 0 0 ;
+
+    }
+    .prouduct-content{
+    border-radius: 0 0 10px 10px;
+    }
+    
+}
